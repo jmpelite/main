@@ -1,0 +1,113 @@
+/* style.css */
+
+/* Base styles for the body */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Dark gradient background similar to the images */
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    color: #e2e8f0; /* Light grey text */
+    line-height: 1.6;
+}
+
+/* Accent color for text and borders */
+.text-blue-accent {
+    color: #63b3ed; /* A light blue for accents, adjust as needed */
+}
+.border-blue-accent {
+    border-color: #63b3ed;
+}
+.bg-blue-accent {
+    background-color: #63b3ed;
+}
+
+/* Responsive padding for sections */
+.section-padding {
+    padding: 4rem 1rem; /* Default padding for mobile */
+}
+@media (min-width: 768px) {
+    .section-padding {
+        padding: 6rem 2rem; /* Increased padding for larger screens */
+    }
+}
+
+/* Styles for card-like elements (e.g., coach section, plan options, testimonials) */
+.card {
+    background-color: #2d3748; /* Slightly lighter dark background for cards */
+    border-radius: 1rem; /* Rounded corners for cards */
+    padding: 2rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Styles for outline buttons */
+.btn-outline {
+    border: 2px solid #63b3ed;
+    color: #63b3ed;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition on hover */
+}
+.btn-outline:hover {
+    background-color: #63b3ed;
+    color: #1a202c; /* Text color changes to dark on hover */
+}
+
+/* Styles for feature list items (with plus icons) */
+.feature-item {
+    display: flex;
+    align-items: flex-start; /* Align icon and text at the top */
+    margin-bottom: 1rem;
+}
+.feature-icon {
+    color: #63b3ed;
+    font-size: 1.5rem; /* Size of the plus icon */
+    margin-right: 0.75rem;
+    line-height: 1; /* Ensures vertical alignment */
+}
+/* Custom content for the plus icon using ::before pseudo-element */
+.plus-icon::before {
+    content: '+';
+    font-weight: bold;
+}
+
+/* Styles for testimonial cards */
+.testimonial-card {
+    background-color: #2d3748;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+.testimonial-quote {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #cbd5e0; /* Slightly lighter grey for quotes */
+}
+.testimonial-author {
+    font-weight: 600;
+    color: #e2e8f0;
+}
+.testimonial-details {
+    font-size: 0.9rem;
+    color: #a0aec0; /* Lighter grey for details */
+}
+
+/* Styles for AI Advisor section elements */
+.ai-input-area {
+    min-height: 100px; /* Minimum height for the textarea */
+    resize: vertical; /* Allow vertical resizing by user */
+    background-color: #1a202c;
+    border: 1px solid #4a5568;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%; /* Full width */
+}
+.ai-output-area {
+    background-color: #2d3748;
+    border: 1px solid #4a5568;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    min-height: 150px; /* Minimum height for the output area */
+    text-align: left;
+    white-space: pre-wrap; /* Preserve whitespace and line breaks from AI response */
+    word-wrap: break-word; /* Break long words to prevent horizontal scrolling */
+}
